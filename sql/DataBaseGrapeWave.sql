@@ -22,20 +22,21 @@ Imágen blob);
 
 select * from Productos;
 
-create table Empleados(
-Id_Empleado int primary key not null,
-Nombre_Empleado varchar(30),
-Ap_PatEmp varchar(15),
-Ap_MatEmp varchar(15),
-Teléfono_Empleado int(10),
-Calle_Empleado varchar(15),
-Num_ExtEmpleado int(5),
-Colonia_Empleado varchar(15),
-Municipio_Empleado varchar(25),
-Estado_Empleado varchar(25),
+create table Usuarios(
+Id_Usuario int primary key not null auto_increment,
+Nombre_Usuario varchar(30),
+Ap_PatUser varchar(30),
+Ap_MatUser varchar(30),
+Telefono_Usuario varchar(10),
+Calle_Usuario varchar(30),
+Num_ExtUsuario int(6),
+Colonia_Usuario varchar(25),
+Municipio_Usuario varchar(35),
+Estado_Usuario varchar(25),
+Correo_Usuario varchar(255),
 contraseña varchar(20));
 
-select * from Empleados;
+select * from Usuarios;
 
 
 create table Sucursal(

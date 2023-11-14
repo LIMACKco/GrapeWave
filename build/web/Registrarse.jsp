@@ -120,11 +120,11 @@ input[type="submit"] {/* Estilo del Submit */
         <br><br>
         <input type="text" class="campo" placeholder="Apellido Materno" name="ApMat" required>
         <br><br>
-        <input type="text" class="campo" placeholder="Teléfono" name="Telefono" required>
+        <input type="number" class="campo" placeholder="Teléfono" name="Telefono" required>
         <br><br>
         <input type="text" class="campo" placeholder="Calle" name="Calle" required>
         <br><br>
-        <input type="text" class="campo" placeholder="Número" name="Numero" required>
+        <input type="number" class="campo" placeholder="Número" name="Numero" required>
         <br><br>
         <input type="text" class="campo" placeholder="Colonia" name="Colonia" required>
         <br><br>

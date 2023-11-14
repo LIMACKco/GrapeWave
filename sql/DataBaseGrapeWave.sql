@@ -37,6 +37,7 @@ contraseña varchar(20));
 
 select * from Empleados;
 
+
 create table Sucursal(
 Id_Sucursal int primary key not null,
 Nombre_Sucursal varchar(40),

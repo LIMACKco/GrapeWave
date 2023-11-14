@@ -18,7 +18,7 @@
         <img src="Verified.png" class="imagen">
     </div>
     <div class="texto1">
-        Administrador registrado exitosamente<br>
+        Usuario registrado exitosamente<br>
         <br>Su numero de usuario es
     </div>
     <div class="codigo">

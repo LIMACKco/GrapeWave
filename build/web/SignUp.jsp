@@ -34,7 +34,7 @@
             
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver");//Driver JDBC de MySQL  
-                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false","root","n0m3l0");
+                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false","root","1234");
                 //jdbc:mysql://localhost:Puerto/Nombre de la Base de Datos?autoReconnect=true&useSSL=false","user de MySQL","contraseña de MySQL"
                 String ins = "insert into Usuarios(Nombre_Usuario, Ap_PatUser, Ap_MatUser, Telefono_Usuario, Calle_Usuario, Num_ExtUsuario, Colonia_Usuario, Municipio_Usuario, Correo_Usuario, contraseña) "
                 + "values (?,?,?,?,?,?,?,?,?,?)";

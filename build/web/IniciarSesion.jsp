@@ -14,20 +14,24 @@
     <link rel="stylesheet" href="IniciarSesion.css">
 </head>
 <body>
+    <form action="LoginEmp.jsp" method="post">
     <div class="left-decorationii"></div>
     <div class="right-decorationii"></div>
-    <a href="SelectPerfil.jsp">
+    
+    <a href="SelectPerfil.jsp">   
     <div class="logo-container">
         <img src="LogoGRPWVE.png" alt="Logo" class="logo">
     </div>
     </a>
+   
     <div class="Titulo">
         Iniciar sesión
     </div>
     
     <div class="form">
-    <input type="text" class="campo" placeholder="Nombre de usuario"><br><br><br><br>
-    <input type="password" class="campo" placeholder="Contraseña">
+        <input type="email" name="Email" class="campo" placeholder="Email" >
+        <br><br><br><br>
+        <input type="password" name="Contrasena" class="campo" placeholder="Contraseña" >
     </div>
     
     <div class="texto1">
@@ -35,8 +39,9 @@
     </div>
     
     <div class="boton-login">
-        <a class="login-button" href="#">Iniciar sesión</a>
+        <input type="submit" name="LoginEmp" value="Iniciar Sesión">
     </div>
+</form>
 </body>
 </html>
 

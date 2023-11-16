@@ -1,5 +1,5 @@
 <%-- 
-    Document   : SignUp
+    Document   : Signup
     Created on : 13 nov. 2023, 17:23:26
     Author     : Aldo Gonzalez
 --%>
@@ -34,7 +34,7 @@
             
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver");//Driver JDBC de MySQL  
-                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false","root","1234");
+                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false","root","n0m3l0");
                 //jdbc:mysql://localhost:Puerto/Nombre de la Base de Datos?autoReconnect=true&useSSL=false","user de MySQL","contraseña de MySQL"
                 String ins = "insert into Usuarios(Nombre_Usuario, Ap_PatUser, Ap_MatUser, Telefono_Usuario, Calle_Usuario, Num_ExtUsuario, Colonia_Usuario, Municipio_Usuario, Correo_Usuario, contraseña) "
                 + "values (?,?,?,?,?,?,?,?,?,?)";
@@ -55,7 +55,7 @@
                 sta.close();//Cierra el Statement           
                 cnx.close();//Cierra la conexión
                 
-                response.sendRedirect("Acepta.jsp");
+                response.sendRedirect("SignupCheck.jsp");
             }
             catch(SQLException e){
                 out.println(e.toString());

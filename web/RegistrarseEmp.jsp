@@ -35,7 +35,7 @@ body {
 
 input[type="submit"] {/* Estilo del Submit */
     font-size: 24px;/*Tamaño de la fuente*/
-    margin-top: 50%;/*Margen del boton hacia arriba con respecto a un div*/
+    margin-top: 130px;/*Margen del boton hacia arriba con respecto a un div*/
     background-color: #b8ff68; /* Color verde */
     padding: 20px 40px;/*Margen interno */
     color: black;/*Color de la letra*/
@@ -45,6 +45,12 @@ input[type="submit"] {/* Estilo del Submit */
     position: absolute;/*Permite que los divs no se encimen*/
     left: 50%;/*Espacio a la izquierda cojn respecto a la página*/
     transform: translateX(-50%);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background-color: #9266cc;
+    color: #ffffff;
 }
 
 .Titulo {
@@ -81,7 +87,7 @@ input[type="submit"] {/* Estilo del Submit */
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 150%;
+    top: 135%;
     height: auto;
     width: 30%;
     left: 50%;
@@ -102,12 +108,15 @@ input[type="submit"] {/* Estilo del Submit */
 </head>
 
 <body>
-    <form action="SignUp.jsp" method="post">
+    <form action="SignUpEmp.jsp" method="post">
     <div class="left-decoration"></div>
+    
     <div class="right-decoration"></div>
-        <div class="logo-container">
-            <img src="LogoGRPWVE.png" alt="Logo" class="logo">
-        </div>
+    
+    <div class="logo-container">
+        <img src="LogoGRPWVE.png" alt="Logo" class="logo">
+    </div>
+    
     </a>
     <div class="Titulo">
         Registrarse
@@ -130,7 +139,11 @@ input[type="submit"] {/* Estilo del Submit */
         <br><br>
         <input type="text" class="campo" placeholder="Municipio" name="Municipio" required>
         <br><br>
+        <input type="text" class="campo" placeholder="Estado" name="Estado" required>
+        <br><br>
         <input type="email" class="campo" placeholder="Correo Electrónico" name="Email" required>
+        <br><br>
+        <input type="text" class="campo" placeholder="Código de Administrador" name="Codigo" required>
         <br><br>
         <input type="password" class="campo" placeholder="Contraseña" name="Contrasenia" required>
         <br><br>
@@ -140,11 +153,10 @@ input[type="submit"] {/* Estilo del Submit */
     </div>
     
     <div class="texto1">
-        ¿Ya tienes cuenta?<a href="IniciarSesion.jsp" class="vinculo">&nbsp;Inicia sesión.</a>
+        ¿Ya tienes cuenta?&nbsp;<a href="IniciarSesion.jsp" class="vinculo">Inicia sesión.</a>
     </div>
-    </form>
-
+    
     <div class="space">.</div>
-
+    </form>
 </body>
 </html>

@@ -112,7 +112,6 @@ body {
 .start-button:hover {
     background-color: #9266cc;
     color: #ffffff;
-    transform: translateY(-3px);
 }
 
 .Titulo{
@@ -156,7 +155,7 @@ body {
 .texto2{
     font-size: 20px;
     position: absolute; /* Cambiado a posición fija */
-    top: 65%; /* Ajusta la posición vertical según tu preferencia */
+    top: 70%; /* Ajusta la posición vertical según tu preferencia */
     left: 50%;
     transform: translateX(-50%); /* Centra horizontalmente */
     text-align: center;

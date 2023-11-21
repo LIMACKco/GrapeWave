@@ -28,13 +28,13 @@
     <div class="Titulo">
         Selecciona tu perfil
     </div>
-    <a href="IniciarSesionAd.jsp">
+    <a href="RegistrarseAd.jsp">
         <div class="btnAdm">
             <img src="Engrane.png" class="engrane"><br><br>
             Administrador
         </div>
     </a>
-    <a href="IniciarSesion.jsp">
+    <a href="RegistrarseEmp.jsp">
     <div class="btnEmp">
         <img src="empleado.png" class="empleado"><br><br>
         Empleado

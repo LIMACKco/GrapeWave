@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="SignupCheck.css">
+    <link rel="stylesheet" href="SignUpEmpCheck.css">
 </head>
 <body>
     <div class="imgver">
@@ -13,7 +13,7 @@
     </div>
     
     <div class="texto1">
-        Usuario Registrado Exitosamente
+        Empleado Registrado Exitosamente
         <br><br>
         Estas a unos pasos de ser parte de GrapeWave
     </div>

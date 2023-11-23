@@ -1,0 +1,237 @@
+/* 
+    Created on : 6 nov. 2023, 19:52:57
+    Author     : Aldo Gonzalez
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    transition: all .3s;
+}
+
+.left-decoration,
+.right-decoration {
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 50%;
+    height: 6%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 20%; /* Ancho del rectángulo */
+    background-color: #9266cc; /* Color morado */
+}
+
+.left-decoration {
+    left: 0;
+}
+
+.right-decoration {
+    right: 0;
+}
+
+.top-bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #b8ff68;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+.login {
+    font-size: 24px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 35px;
+    background-color: #b8ff68;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.login:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.register {
+    font-size: 24px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 35px;
+    background-color: #444941;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.register:hover {
+    background-color: #b8ff68;
+    color: #000000;
+}
+
+.logo-container {
+    position: absolute; /* Cambiado a posición fija */
+    top: 16%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    height: auto;
+}
+
+.boton-start {
+    text-align: center;
+    margin-top: 37%;
+}
+
+.start-button {
+    font-size: 24px;
+    padding: 20px 40px;
+    background-color: #b8ff68;
+    color: black;
+    border: none;
+    border-radius: 45px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #9266cc;
+    color: #ffffff;
+}
+
+.Titulo{
+    font-size: 60px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 46%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #ffffff;
+}
+
+.left-decorationii{
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 15%;
+    height: 0.2%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 30%; /* Ancho del rectángulo */
+    background-color: #b8ff68; /* Color morado */
+    left: 0;
+}
+
+.right-decorationii{
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 93%;
+    height: 0.2%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 30%; /* Ancho del rectángulo */
+    background-color: #b8ff68; /* Color morado */
+    right: 0;
+}
+
+.texto1{
+    font-size: 35px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 57%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #ffffff;
+}
+
+.texto2{
+    font-size: 20px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 70%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #ffffff;
+}
+.presentacion{
+    position: absolute;
+    margin-top: 100px;
+    color: whitesmoke;
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.encabezado{
+    color: #b8ff68;
+}
+
+.encabezado2{
+    color: #9266cc;
+}
+
+.tarjeta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en 2 columnas */
+    gap: 10%; /* Espacio entre las tarjetas */
+}
+
+/* Estilos comunes para todas las tarjetas */
+.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5, .tarjeta6 {
+    background-color: #241e1e; /* Color de fondo de la tarjeta */
+    border: 1px solid #e0e0e0; /* Borde de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ancho de la tarjeta al 100% */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+.tarjeta1:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta2:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta3:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta4:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta5:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta6:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.contenido {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+::-webkit-scrollbar {
+display: none;
+}

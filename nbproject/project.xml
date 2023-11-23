@@ -3,13 +3,24 @@
     <type>org.netbeans.modules.web.project</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
+<<<<<<< HEAD
             <name>GrapeWaveWeb</name>
+=======
+            <name>GrapeWave</name>
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
                     <file>${file.reference.mysql-connector-j-8.2.0.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+<<<<<<< HEAD
+=======
+                <library dirs="200">
+                    <file>${file.reference.mysql-connector-j-8.2.0.jar-1}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>

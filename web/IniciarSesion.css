@@ -10,6 +10,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
 .logo-container {
     position: fixed;
     top: 10px;
@@ -21,16 +25,26 @@ body {
     height: auto;
 }
 
+<<<<<<< HEAD
 .Titulo {
     font-size: 60px;
     position: absolute;
     top: 16%;
     left: 50%;
     transform: translateX(-50%);
+=======
+.Titulo{
+    font-size: 60px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 16%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
     text-align: center;
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .left-decorationii {
     position: absolute;
     top: 18%;
@@ -50,18 +64,46 @@ body {
 }
 
 .form {
+=======
+.left-decorationii{
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 18%;
+    height: 60%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 0.2%; /* Ancho del rectángulo */
+    background-color: #b8ff68; /* Color morado */
+    left: 32%;
+}
+
+.right-decorationii{
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 18%;
+    height: 60%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 0.2%; /* Ancho del rectángulo */
+    background-color: #b8ff68; /* Color morado */
+    right: 32%;
+}
+
+.form{
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
     position: fixed;
     top: 33%;
     margin-left: 50%;
     transform: translate(-50%);
 }
+<<<<<<< HEAD
 
 .campo {
+=======
+.campo{
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
     font-size: 35px;
     border-radius: 30px;
     border: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
 .campo:focus {
     background-color: #000000;
     color: #ffffff;
@@ -70,6 +112,7 @@ body {
 .texto1 {
     position: absolute;
     color: #ffffff;
+<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,3 +129,19 @@ body {
     margin-left: 10px; /* Ajusta el espacio entre el texto y el enlace */
 }
 
+=======
+    display: flex; /* Cambiamos de 'grid' a 'flex' */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+    top: 65%;
+    height: auto;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%); /* Centramos en x */
+    white-space: nowrap; /* Evitamos el salto de línea */
+}
+
+.vinculo{
+    color: #ffffff;
+}
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32

@@ -35,7 +35,11 @@ body {
 
 input[type="submit"] {/* Estilo del Submit */
     font-size: 24px;/*Tamaño de la fuente*/
+<<<<<<< HEAD
     margin-top: 50px;/*Margen del boton hacia arriba con respecto a un div*/
+=======
+    margin-top: 130px;/*Margen del boton hacia arriba con respecto a un div*/
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
     background-color: #b8ff68; /* Color verde */
     padding: 20px 40px;/*Margen interno */
     color: black;/*Color de la letra*/

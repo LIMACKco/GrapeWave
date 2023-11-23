@@ -35,7 +35,15 @@ body {
 
 input[type="submit"] {/* Estilo del Submit */
     font-size: 24px;/*Tamaño de la fuente*/
+<<<<<<< HEAD
     top: 110%;
+=======
+
+    margin-top: 50px;/*Margen del boton hacia arriba con respecto a un div*/
+
+    margin-top: 130px;/*Margen del boton hacia arriba con respecto a un div*/
+
+>>>>>>> c6c9ab9fbe889f6facb9d46932af9c90fd79a153
     background-color: #b8ff68; /* Color verde */
     padding: 20px 40px;/*Margen interno */
     color: black;/*Color de la letra*/
@@ -87,7 +95,11 @@ input[type="submit"]:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     top: 150%;
+=======
+    top: 135%;
+>>>>>>> c6c9ab9fbe889f6facb9d46932af9c90fd79a153
     height: auto;
     width: 30%;
     left: 50%;

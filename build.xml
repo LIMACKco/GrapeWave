@@ -7,8 +7,18 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
+<<<<<<< HEAD
 <project name="GrapeWave" default="default" basedir=".">
     <description>Builds, tests, and runs the project GrapeWave.</description>
+=======
+<<<<<<< HEAD
+<project name="GrapeWaveWeb" default="default" basedir=".">
+    <description>Builds, tests, and runs the project GrapeWaveWeb.</description>
+=======
+<project name="GrapeWave" default="default" basedir=".">
+    <description>Builds, tests, and runs the project GrapeWave.</description>
+>>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
+>>>>>>> c6c9ab9fbe889f6facb9d46932af9c90fd79a153
     <import file="nbproject/build-impl.xml"/>
     <!--
 

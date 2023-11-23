@@ -15,24 +15,24 @@
     <style>
         input[type="submit"] {/* Estilo del Submit */
         font-size: 24px;/*Tamaño de la fuente*/
-<<<<<<< HEAD
+
         top: -150%;/*Margen del boton hacia arriba con respecto a un div*/
-=======
+
         margin-top: 50%;/*Margen del boton hacia arriba con respecto a un div*/
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
+
         background-color: #b8ff68; /* Color verde */
         padding: 20px 40px;/*Margen interno */
         color: black;/*Color de la letra*/
         border: none;/*Borde*/
-<<<<<<< HEAD
+
         border-radius: 45px;/*Redondeado  del botón*/
         text-decoration: none;
         position: fixed;/*Permite que los divs no se encimen*/
-=======
+
         border-radius: 45px;/*Redondeado del botón*/
         text-decoration: none;
         position: absolute;/*Permite que los divs no se encimen*/
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
+
         left: 50%;/*Espacio a la izquierda cojn respecto a la página*/
         transform: translateX(-50%);
         transition: background-color 0.3s ease, transform 0.3s ease;
@@ -60,7 +60,7 @@
         Iniciar sesión
     </div>
     
-<<<<<<< HEAD
+
     <div class="form" >
         <input type="email" name="Email" class="campo" placeholder="Email" >
         <br><br><br><br>
@@ -73,7 +73,7 @@
         <input type="submit" name="Login" value="Iniciar Sesión">
         No tienes cuenta?&nbsp;<a href="SelectPerfil.jsp" class="vinculo">Registrate</a>
         <br><br><br>
-=======
+
     <div class="form">
         <input type="email" name="Email" class="campo" placeholder="Email" >
         <br><br>
@@ -87,7 +87,7 @@
         No tienes cuenta?&nbsp;<a href="Registrarse.jsp" class="vinculo">Registrate</a>
         <br><br><br>
         <input type="submit" name="LoginEmp" value="Iniciar Sesión">
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
+
     </div>
 </form>
 </body>

@@ -13,7 +13,7 @@
     </div>
     
     <div class="texto1">
-<<<<<<< HEAD
+
         Empleado Registrado Exitosamente.
         <br><br>
         Inicia Sesión para acceder a los beneficios y ser parte de GrapeWave.
@@ -21,7 +21,7 @@
     
     <div class="boton-start">
         <a class="start-button" href="IniciarSesion.jsp">Continuar →</a>
-=======
+
         Empleado Registrado Exitosamente
         <br><br>
         Estas a unos pasos de ser parte de GrapeWave
@@ -29,7 +29,7 @@
     
     <div class="boton-start">
         <a class="start-button" href="SelectPerfil.jsp">Continuar →</a>
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
+
     </div>
 </body>
 </html>

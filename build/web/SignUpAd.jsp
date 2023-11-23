@@ -18,11 +18,7 @@
             String nombre = request.getParameter("Nombre");
             String appat = request.getParameter("ApPat");
             String apmat = request.getParameter("ApMat");
-<<<<<<< HEAD
             int telefono = Integer.parseInt(request.getParameter("Telefono"));
-=======
-            String telefono = request.getParameter("Telefono");
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
             String calle = request.getParameter("Calle");
             int numero = Integer.parseInt(request.getParameter("Numero"));
             String colonia = request.getParameter("Colonia");
@@ -45,11 +41,7 @@
                 sta.setString(1, nombre);
                 sta.setString(2, appat);
                 sta.setString(3, apmat);
-<<<<<<< HEAD
                 sta.setInt(4, telefono);
-=======
-                sta.setString(4, telefono);
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
                 sta.setString(5, calle);
                 sta.setInt(6, numero);
                 sta.setString(7, colonia);
@@ -63,11 +55,11 @@
                 sta.close();//Cierra el Statement           
                 cnx.close();//Cierra la conexión
                 
-<<<<<<< HEAD
+
                 response.sendRedirect("SignUpAdCheck.jsp");
-=======
+
                 response.sendRedirect("SignUpEmpCheck.jsp");
->>>>>>> 3d91789dc96cacb2654c091e8998c06f0f0f3f32
+
             }
             catch(SQLException e){
                 out.println(e.toString());

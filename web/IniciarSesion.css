@@ -1,0 +1,70 @@
+/* 
+    Created on : 6 nov. 2023, 20:06:42
+    Author     : Aldo Gonzalez
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+}
+
+.logo {
+    max-width: 20%; 
+    height: auto;
+}
+
+.Titulo{
+    font-size: 60px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 16%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #ffffff;
+}
+
+.left-decorationii {
+    position: absolute;
+    top: 18%;
+    height: 80%;
+    width: 0.2%;
+    background-color: #b8ff68;
+    left: 32%;
+}
+
+.right-decorationii {
+    position: absolute;
+    top: 18%;
+    height: 80%;
+    width: 0.2%;
+    background-color: #b8ff68;
+    right: 32%;
+}
+
+.form{
+    position: absolute;
+    top: 33%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.campo{
+    font-size: 35px;
+    border-radius: 30px;
+    border: none;
+}
+.campo:focus {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+

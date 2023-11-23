@@ -1,0 +1,88 @@
+/* 
+    Created on : 6 nov. 2023, 20:06:42
+    Author     : Aldo Gonzalez
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+}
+
+.logo {
+    max-width: 20%; 
+    height: auto;
+}
+
+.Titulo {
+    font-size: 60px;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.left-decorationii {
+    position: absolute;
+    top: 18%;
+    height: 60%;
+    width: 0.2%;
+    background-color: #b8ff68;
+    left: 32%;
+}
+
+.right-decorationii {
+    position: absolute;
+    top: 18%;
+    height: 60%;
+    width: 0.2%;
+    background-color: #b8ff68;
+    right: 32%;
+}
+
+.form {
+    position: fixed;
+    top: 33%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.campo {
+    font-size: 35px;
+    border-radius: 30px;
+    border: none;
+}
+
+.campo:focus {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.texto1 {
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 65%;
+    height: auto;
+    width: 50%; /* Ajusta el ancho del contenedor */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.vinculo {
+    color: #ffffff;
+    margin-left: 10px; /* Ajusta el espacio entre el texto y el enlace */
+}
+

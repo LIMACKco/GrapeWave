@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.io.PrintWriter" %>
 <%@page import="java.sql.*" %>
+<%@page import="Conexión.Conexion" %>
 
 <!DOCTYPE html>
 <html>
@@ -19,8 +20,7 @@
     ResultSet rs = null;
 
     try {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+        cnx = Conexion.obtenerConexion();
 
         String nombreUsuario = null;
 
@@ -33,6 +33,7 @@
 
         if (rs.next()) {
             nombreUsuario = rs.getString("Nombre_Empleado");
+            response.sendRedirect("BienvenidaEmp.jsp?nombre=" + nombreUsuario + "&correo=" + email);
         } else {
             // Verificar en la tabla Administrador
             String adminQuery = "select Nombre_Admin from Administrador where Correo_Admin = ? and contraseña = ?";
@@ -43,6 +44,7 @@
 
             if (rs.next()) {
                 nombreUsuario = rs.getString("Nombre_Admin");
+                response.sendRedirect("BienvenidaAdmin.jsp?nombre=" + nombreUsuario + "&correo=" + email);
             } else {
                 // Verificar en la tabla Dueño
                 String duenoQuery = "select Nombre_Master from Dueño where Correo_Master = ? and contraseña = ?";
@@ -53,21 +55,18 @@
 
                 if (rs.next()) {
                     nombreUsuario = rs.getString("Nombre_Master");
+                    response.sendRedirect("BienvenidaMaster.jsp?nombre=" + nombreUsuario + "&correo=" + email);
+                }
+                else{
+                    response.sendRedirect("ErrorLoginEmp.jsp");     
                 }
             }
         }
 
-        if (nombreUsuario != null) {
-            // Redirigir a la página de bienvenida con el nombre del usuario
-            response.sendRedirect("Bienvenida.jsp?nombre=" + nombreUsuario);
-        } else {
-            // Usuario o contraseña incorrectos
-            response.sendRedirect("ErrorLoginEmp.jsp");
-        }
-
         sta.close();
         cnx.close();
-    } catch (SQLException | ClassNotFoundException e) {
+    }
+    catch(SQLException e) {
         out.println(e.toString());
     }
 %>

@@ -15,11 +15,13 @@
     <body>
 
         <%@page import="java.sql.*" %>
+        <%@page import="Conexión.Conexion"%>
         <%
             String nombre = request.getParameter("Nombre");
             String appat = request.getParameter("ApPat");
             String apmat = request.getParameter("ApMat");
-            int telefono = Integer.parseInt(request.getParameter("Telefono"));
+            long telefono = Long.parseLong(request.getParameter("Telefono"));/*Se usa long por la extensión del numero, 
+            no se puede usar un int porque es demasiado grande*/
             String calle = request.getParameter("Calle");
             int numero = Integer.parseInt(request.getParameter("Numero"));
             String colonia = request.getParameter("Colonia");
@@ -33,16 +35,14 @@
             PreparedStatement sta = null;//Variable de Statement
             
             try{
-                Class.forName("com.mysql.cj.jdbc.Driver");//Driver JDBC de MySQL  
-                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false","root","n0m3l0");
-                //jdbc:mysql://localhost:Puerto/Nombre de la Base de Datos?autoReconnect=true&useSSL=false","user de MySQL","contraseña de MySQL"
-                String ins = "insert into Empleados(Nombre_Empleado, Ap_PatEmp, Ap_MatEmp, Telefono_Empleado, Calle_Empleado, Num_ExtEmpleado, Colonia_Empleado, Municipio_Empleado, Estado_Empleado, Correo_Empleado, contraseña) "
+                cnx = Conexion.obtenerConexion();
+                String query = "insert into Empleados(Nombre_Empleado, Ap_PatEmp, Ap_MatEmp, Telefono_Empleado, Calle_Empleado, Num_ExtEmpleado, Colonia_Empleado, Municipio_Empleado, Estado_Empleado, Correo_Empleado, contraseña) "
                 + "values (?,?,?,?,?,?,?,?,?,?,?)";
-                sta = cnx.prepareStatement(ins);//Crea el Statement
+                sta = cnx.prepareStatement(query);//Crea el Statement
                 sta.setString(1, nombre);
                 sta.setString(2, appat);
                 sta.setString(3, apmat);
-                sta.setInt(4, telefono);
+                sta.setLong(4, telefono);
                 sta.setString(5, calle);
                 sta.setInt(6, numero);
                 sta.setString(7, colonia);

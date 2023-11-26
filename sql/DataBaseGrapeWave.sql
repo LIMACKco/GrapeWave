@@ -66,7 +66,7 @@ Id_Empleado int primary key not null auto_increment,
 Nombre_Empleado varchar(30),
 Ap_PatEmp varchar(30),
 Ap_MatEmp varchar(30),
-Telefono_Empleado bigint(10),
+Telefono_Empleado bigint(10), -- Se usa bigint por la extensión del número
 Calle_Empleado varchar(30),
 Num_ExtEmpleado int(6),
 Colonia_Empleado varchar(25),

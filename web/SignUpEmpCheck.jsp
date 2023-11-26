@@ -21,15 +21,7 @@
     
     <div class="boton-start">
         <a class="start-button" href="IniciarSesion.jsp">Continuar →</a>
-
-        Empleado Registrado Exitosamente
-        <br><br>
-        Estas a unos pasos de ser parte de GrapeWave
     </div>
     
-    <div class="boton-start">
-        <a class="start-button" href="SelectPerfil.jsp">Continuar →</a>
-
-    </div>
 </body>
 </html>

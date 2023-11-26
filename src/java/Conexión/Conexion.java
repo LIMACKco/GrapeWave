@@ -7,7 +7,7 @@ public class Conexion {
     public static Connection obtenerConexion() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
         } 
         catch (ClassNotFoundException | SQLException e) {
             throw new SQLException("Error al obtener la conexión a la base de datos", e);

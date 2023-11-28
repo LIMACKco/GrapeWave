@@ -1,9 +1,3 @@
-<%-- 
-    Document   : SignUpAd
-    Created on : 21 nov. 2023, 13:14:41
-    Author     : Alumno
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +8,9 @@
     <body>
         
         <%@page import="java.sql.*" %>
-        <%@page import="Conexión.Conexion"%><-<!-- Importa la conexión del package -->        <%
+        <%@page import="Conexión.Conexion"%>
+        
+        <%
             String nombre = request.getParameter("Nombre");
             String appat = request.getParameter("ApPat");
             String apmat = request.getParameter("ApMat");
@@ -28,35 +24,64 @@
             String codigo = request.getParameter("Codigo");
             String contra = request.getParameter("Contrasenia");
             
-            Connection cnx = null;//Variable de conexion
-            PreparedStatement sta = null;//Variable de Statement
+            Connection cnx = null;
+            PreparedStatement sta = null;
+            ResultSet rs = null;
             
-            try{
+            try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                cnx = Conexion.obtenerConexion();
-                String query = "insert into Administrador(Nombre_Admin, Ap_PatAdmin, Ap_MatAdmin, Teléfono_Admin, Calle_Admin, Num_ExtAdmin, Colonia_Admin, Municipio_Admin, Estado_Admin, Correo_Admin, contraseña) "
-                + "values (?,?,?,?,?,?,?,?,?,?,?)";
-                sta = cnx.prepareStatement(query);//Crea el Statement
-                sta.setString(1, nombre);
-                sta.setString(2, appat);
-                sta.setString(3, apmat);
-                sta.setLong(4, telefono);
-                sta.setString(5, calle);
-                sta.setInt(6, numero);
-                sta.setString(7, colonia);
-                sta.setString(8, municipio);
-                sta.setString(9, estado);
-                sta.setString(10, email);
-                sta.setString(11, contra);
+                cnx = Conexion.obtenerConexion( Conexion.isLocalHost( request ) );
                 
-                sta.executeUpdate();
-                //sta.executeUpdate manda los Archivos a la Base de Datos
-                sta.close();//Cierra el Statement           
-                cnx.close();//Cierra la conexión
-                response.sendRedirect("SignUpAdCheck.jsp");
-            }
-            catch(SQLException e){
+                // Verificar si el código de sucursal existe en la tabla Sucursal
+                String querySucursal = "select * from Sucursal where Código_Sucursal = ?";
+                sta = cnx.prepareStatement(querySucursal);
+                sta.setString(1, codigo);
+                rs = sta.executeQuery();
+                
+                if (rs.next()) {
+                    // El código de sucursal existe, proceder con la inserción en la tabla Administrador
+                    String query = "insert into Administrador(Nombre_Admin, Ap_PatAdmin, Ap_MatAdmin, Teléfono_Admin, Calle_Admin, Num_ExtAdmin, Colonia_Admin, Municipio_Admin, Estado_Admin, Correo_Admin, contraseña) "
+                            + "values (?,?,?,?,?,?,?,?,?,?,?)";
+                    sta = cnx.prepareStatement(query);
+                    sta.setString(1, nombre);
+                    sta.setString(2, appat);
+                    sta.setString(3, apmat);
+                    sta.setLong(4, telefono);
+                    sta.setString(5, calle);
+                    sta.setInt(6, numero);
+                    sta.setString(7, colonia);
+                    sta.setString(8, municipio);
+                    sta.setString(9, estado);
+                    sta.setString(10, email);
+                    sta.setString(11, contra);
+                    
+                    sta.executeUpdate();
+                    
+                    response.sendRedirect("SignUpAdCheck.jsp");
+                } 
+                else {
+                    // El código de sucursal no existe, redirigir a una página de error
+                    response.sendRedirect("ErrorSucursal.jsp");
+                }
+            } 
+            catch (SQLException e) {
                 out.println(e.toString());
+            } 
+            finally {
+                try {
+                    if (rs != null) {
+                        rs.close();
+                    }
+                    if (sta != null) {
+                        sta.close();
+                    }
+                    if (cnx != null) {
+                        cnx.close();
+                    }
+                } 
+                catch (SQLException ex) {
+                    out.println(ex.toString());
+                }
             }
         %>
     </body>

@@ -20,7 +20,7 @@
     ResultSet rs = null;
 
     try {
-        cnx = Conexion.obtenerConexion();
+        cnx = Conexion.obtenerConexion( Conexion.isLocalHost( request ) );
 
         String nombreUsuario = null;
 
@@ -58,7 +58,7 @@
                     response.sendRedirect("BienvenidaMaster.jsp?nombre=" + nombreUsuario + "&correo=" + email);
                 }
                 else{
-                    response.sendRedirect("ErrorLoginEmp.jsp");     
+                    response.sendRedirect("ErrorLogin.jsp");     
                 }
             }
         }

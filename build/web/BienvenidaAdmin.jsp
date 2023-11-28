@@ -1,93 +1,125 @@
+<%-- 
+    Document   : Bienvenida
+    Created on : 22 nov. 2023, 23:00:27
+    Author     : Aldo Gonzalez
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menú Administrador</title>
+    <title>Bienvenido</title>
     <style>
         body {
             background-color: #000000;
             margin: 0;
+            overflow: hidden; /* Evitar desplazamiento horizontal */
+        }
+
+        .morado {
+            position: absolute;
+            background-color: #613382;
+            width: 100%;
+            height: 50%;
+        }
+
+        .circulo {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .foto {
+            position: fixed;
+            width: 280px;
+            height: 280px;
+            background-image: url(64572.png);
+            background-size: cover;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .texto1 {
+            font-size: 70px;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #ffffff;
             font-family: Arial, sans-serif;
         }
 
-        header {
-            background-color: #613382;
-            color: #ffffff;
+        .texto {
+            font-size: 70px;
+            position: fixed;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
-            padding: 15px 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #613382;
-            padding: 10px 0;
-        }
-
-        nav a {
             color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-family: Arial, sans-serif;
         }
 
-        nav a:hover {
-            background-color: #8464a5;
+        .barra-de-carga {
+            position: fixed;
+            bottom: 5%; /* Ajusta la posición vertical de la barra de carga */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%; /* Ancho de la barra de carga */
+            height: 10px;
+            background-color: #fff; /* Color de fondo de la barra de carga */
         }
 
-        section {
-            padding: 20px;
-            color: #ffffff;
-        }
-
-        h2 {
-            color: #ffffff;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
+        .barra-de-progreso {
+            height: 100%;
+            width: 0;
+            background-color: #b8ff68; /* Color de la barra de progreso */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Menú Administrador</h1>
-    </header>
+    <div class="morado"></div>
+    <div class="texto1"><%= request.getParameter("nombre") %></div>
+    <div class="circulo"></div>
+    <div class="foto"></div>
+    <div class="texto">Bienvenido a GrapeWave</div>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Gestión de Usuarios</a>
-        <a href="#">Informes</a>
-        <a href="#">Cerrar Sesión</a>
-    </nav>
+    <!-- Barra de carga -->
+    <div class="barra-de-carga">
+        <div class="barra-de-progreso" id="barra-de-progreso"></div>
+    </div>
 
-    <section>
-        <h2>Inicio</h2>
-        <p>Bienvenido al sistema de gestión de GrapeWave. Aquí encontrarás las funciones principales para llevar a cabo tus tareas.</p>
+    <script>
+        // Simular el progreso de la barra de carga
+        function simularProgreso() {
+            var barraDeProgreso = document.getElementById('barra-de-progreso');
+            var progreso = 0;
+            var intervalo = setInterval(function() {
+                if (progreso >= 100) {
+                    clearInterval(intervalo);
+                    // Redirigir a otra pantalla cuando la barra esté completa
+                    window.location.href = 'MenuAdmin.jsp?nombre=<%= request.getParameter("nombre") %>';
+                } else {
+                    progreso++;
+                    barraDeProgreso.style.width = progreso + '%';
+                }
+            }, 20); // Ajusta la velocidad de la barra de carga
+        }
 
-        <!-- Secciones específicas para el rol de Administrador -->
-        <h2>Gestión de Usuarios</h2>
-        <ul>
-            <li>Registrar Usuarios</li>
-            <li>Modificar Información de Usuarios</li>
-            <li>Dar de Baja Usuarios</li>
-        </ul>
-
-        <h2>Informes</h2>
-        <ul>
-            <li>Ver Informe de Inventario</li>
-            <li>Ver Informe de Ventas</li>
-            <li>Ver Informe de Gastos</li>
-        </ul>
-    </section>
+        // Llama a la función de simulación cuando la página está completamente cargada
+        window.onload = function() {
+            simularProgreso();
+        };
+    </script>
 </body>
 </html>

@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.logo-container {
+    position: fixed;
+    top: 5%;
+    left: 2%;
+}
+
+.logo {
+    height: 20%;
+    width: 20%;
+}
+
+.boton-add {
+    text-align: center;
+    margin-top: 40%;
+}
+
+.add-button {
+    font-size: 24px;
+    padding: 20px 40px;
+    background-color: #b8ff68;
+    color: black;
+    border: none;
+    border-radius: 45px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.Titulo {
+    font-size: 60px;
+    position: fixed;
+    top: 5%;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.left-decorationii {
+    position: absolute;
+    top: 18%;
+    height: 60%;
+    width: 0.2%;
+    background-color: #b8ff68;
+    left: 32%;
+}
+
+.right-decorationii {
+    position: absolute;
+    top: 18%;
+    height: 60%;
+    width: 0.2%;
+    background-color: #b8ff68;
+    right: 32%;
+}
+
+.form {
+    position: fixed;
+    top: 30%; /* Ajusta la posición vertical según tu preferencia */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* Alinea los campos de entrada al centro */
+}
+
+.campo {
+    font-size: 35px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.campo:focus {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.decoration {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.2%;
+    width: 95%;
+    background-color: #ffffff;
+}
+
+.texto1 {
+    position: fixed;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 67%;
+    height: auto;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.vinculo {
+    color: #ffffff;
+}
+
+input[type="submit"] {/* Estilo del Submit */
+    font-size: 24px;/*Tamaño de la fuente*/
+    top: 70%;/*Margen del boton hacia arriba con respecto a un div*/
+    background-color: #b8ff68; /* Color verde */
+    padding: 20px 40px;/*Margen interno */
+    color: black;/*Color de la letra*/
+    border: none;/*Borde*/
+    border-radius: 45px;/*Redondeado  del botón*/
+    text-decoration: none;
+    position: absolute;/*Permite que los divs no se encimen*/
+    left: 50%;/*Espacio a la izquierda cojn respecto a la página*/
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+        
+input[type="submit"]:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+}

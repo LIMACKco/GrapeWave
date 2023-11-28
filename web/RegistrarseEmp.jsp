@@ -103,11 +103,34 @@ input[type="submit"]:hover{
     margin-top: 80%;
 }
 
+/* Estilo para el mensaje de error */
+        #mensajeError {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
     </style>
+    
+    <script>
+        function validarContraseñas() {//Funcion de Validar Contraseñas
+            var contraseña1 = document.getElementById("contra1").value;
+            var contraseña2 = document.getElementById("contra2").value;
+
+            if (contraseña1 !== contraseña2) {
+                // Contraseñas diferentes, mostrar mensaje de error
+                document.getElementById("mensajeError").innerHTML = "Las contraseñas son diferentes";
+                return false; // Evitar el envío del formulario
+            } else {
+                // Contraseñas coinciden, borrar mensaje de error si existe
+                document.getElementById("mensajeError").innerHTML = "";
+                return true; // Permitir el envío del formulario
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <form action="SignUpEmp.jsp" method="post">
+    <form action="SignUpEmp.jsp" method="post" onsubmit="return validarContraseñas()"><!-- Onsubmit para llamar la funcion al dar click en el Submit -->
     <div class="left-decoration"></div>
     
     <div class="right-decoration"></div>
@@ -128,11 +151,11 @@ input[type="submit"]:hover{
         <br><br>
         <input type="text" class="campo" placeholder="Apellido Materno" name="ApMat" required>
         <br><br>
-        <input type="text" class="campo" placeholder="Teléfono" name="Telefono" required>
+        <input type="tel" class="campo" placeholder="Teléfono" name="Telefono" required maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
         <br><br>
         <input type="text" class="campo" placeholder="Calle" name="Calle" required>
         <br><br>
-        <input type="number" class="campo" placeholder="Número" name="Numero" required>
+        <input type="number" class="campo" placeholder="Número" name="Numero" required min="1">
         <br><br>
         <input type="text" class="campo" placeholder="Colonia" name="Colonia" required>
         <br><br>
@@ -144,10 +167,11 @@ input[type="submit"]:hover{
         <br><br>
         <input type="text" class="campo" placeholder="Código de Administrador" name="Codigo" required>
         <br><br>
-        <input type="password" class="campo" placeholder="Contraseña" name="Contrasenia" required>
+        <input type="password" id="contra1" class="campo" placeholder="Contraseña" name="Contrasenia" required>
         <br><br>
-        <input type="password" class="campo" placeholder="Confirmar contraseña" id="contra2" name="Contraseña2" required>
+        <input type="password" id="contra2" class="campo" placeholder="Confirmar contraseña" id="contra2" name="Contraseña2" required>
         <br><br>
+        <span id="mensajeError"></span><!-- InnerHTML -->
         <input type="submit" name="Registrar" value="Registrar" class="btn">
     </div>
     

@@ -14,6 +14,13 @@
             text-decoration: none;
         }
 
+        header {
+            background-color: #613382;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
         .Titulo {
             font-size: 60px;
             position: fixed;
@@ -24,92 +31,46 @@
             color: #ffffff;
         }
 
-        .btnEmp {
+        .btnEmp, .btnInfo, .btnInv, .btnCons, .btnRetiros {
             border-radius: 20px;
             height: 30%;
             width: 16%;
-            margin-top: 17%;
+            margin-top: 15%;
             position: absolute;
             justify-content: center;
             align-items: center;
             align-content: center;
             text-align: center;
-            left: 13%;
             background-color: #ffffff;
             color: #000000;
+            cursor: pointer;
         }
 
-        .empleado {
+        .empleado, .informes, .inventario, .consultas, .retiros {
             margin-top: 20%;
             background-color: #ffffff;
             height: 48%;
             width: 48%;
+        }
+
+        .btnEmp {
+            left: 2%;
         }
 
         .btnInfo {
-            border-radius: 20px;
-            height: 30%;
-            width: 16%;
-            margin-top: 17%;
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            text-align: center;
-            left: 33%;
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        .informes {
-            margin-top: 20%;
-            background-color: #ffffff;
-            height: 48%;
-            width: 48%;
+            left: 22%;
         }
 
         .btnInv {
-            border-radius: 20px;
-            height: 30%;
-            width: 16%;
-            margin-top: 17%;
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            text-align: center;
-            left: 53%;
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        .inventario {
-            margin-top: 20%;
-            background-color: #ffffff;
-            height: 48%;
-            width: 48%;
+            left: 42%;
         }
 
         .btnCons {
-            border-radius: 20px;
-            height: 30%;
-            width: 16%;
-            margin-top: 17%;
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            text-align: center;
-            left: 73%;
-            background-color: #ffffff;
-            color: #000000;
+            left: 62%;
         }
 
-        .consultas {
-            margin-top: 20%;
-            background-color: #ffffff;
-            height: 48%;
-            width: 48%;
+        .btnRetiros {
+            left: 82%;
         }
 
         .decoration {
@@ -121,39 +82,51 @@
             width: 30%;
             background-color: #ffffff;
         }
+        
+        h1 {
+            font-size: 36px;
+        }
     </style>
 </head>
 <body>
-    <div class="Titulo">Administrador</div>
+    <header>
+        <br>
+        <h1>Hola, <%=request.getParameter("nombre")%></h1>
+    </header>
 
-    <a href="#">
-        <div class="btnEmp">
-            <img src="empleado.png" class="empleado"><br><br>
-            Empleados
-        </div>
-    </a>
+    <div class="Titulo"></div>
 
-    <a href="#">
-        <div class="btnInfo">
-            <img src="Informes.png" class="informes"><br><br>
-            Informes
-        </div>
-    </a>
+    <div class="btnEmp" onclick="redirectTo('GestionEmpleados.jsp')">
+        <img src="empleado.png" class="empleado"><br><br>
+        Gestion de Empleados
+    </div>
 
-    <a href="#">
-        <div class="btnInv">
-            <img src="Inventario.png" class="inventario"><br><br>
-            Inventario
-        </div>
-    </a>
+    <div class="btnInfo" onclick="redirectTo('InformesAdmin.jsp')">
+        <img src="Informes.png" class="informes"><br><br>
+        Informes
+    </div>
 
-    <a href="#">
-        <div class="btnCons">
-            <img src="Consultas.png" class="consultas"><br><br>
-            Consultas
-        </div>
-    </a>
+    <div class="btnInv" onclick="redirectTo('Inventario.jsp')">
+        <img src="Inventario.png" class="inventario"><br><br>
+        Inventario
+    </div>
+
+    <div class="btnCons" onclick="redirectTo('VentaProductos.jsp')">
+        <img src="Consultas.png" class="consultas"><br><br>
+        Venta de Productos
+    </div>
+
+    <div class="btnRetiros" onclick="redirectTo('Retiros.jsp')">
+        <img src="Retiros.png" class="retiros"><br><br>
+        Retiros
+    </div>
 
     <div class="decoration"></div>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>

@@ -25,7 +25,7 @@ body {
 .texto1{
     font-size: 35px;
     position: fixed; /* Cambiado a posición fija */
-    top: 56%; /* Ajusta la posición vertical según tu preferencia */
+    top: 40%; /* Ajusta la posición vertical según tu preferencia */
     left: 50%;
     transform: translateX(-50%); /* Centra horizontalmente */
     text-align: center;

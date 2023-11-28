@@ -35,7 +35,7 @@
             PreparedStatement sta = null;//Variable de Statement
             
             try{
-                cnx = Conexion.obtenerConexion();
+                cnx = Conexion.obtenerConexion( Conexion.isLocalHost( request ) );
                 String query = "insert into Empleados(Nombre_Empleado, Ap_PatEmp, Ap_MatEmp, Telefono_Empleado, Calle_Empleado, Num_ExtEmpleado, Colonia_Empleado, Municipio_Empleado, Estado_Empleado, Correo_Empleado, contraseña) "
                 + "values (?,?,?,?,?,?,?,?,?,?,?)";
                 sta = cnx.prepareStatement(query);//Crea el Statement

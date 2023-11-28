@@ -19,8 +19,8 @@
     </div>
     
     <div class="texto1">
-        Administrador Registrado Exitosamente.
-        <br><br>
+        <h2>Administrador Registrado Exitosamente.</h2>
+        <br>
         Inicia Sesión para acceder a los beneficios y ser parte de GrapeWave.
     </div>
     

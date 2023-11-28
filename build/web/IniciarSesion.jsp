@@ -70,9 +70,9 @@
         </div>
 
         <div class="form">
-            <input type="email" name="Email" class="campo" placeholder="Email" >
+            <input type="email" name="Email" class="campo" placeholder="Email" required>
             <br><br><br><br>
-            <input type="password" name="Contrasena" class="campo" placeholder="Contraseña" >
+            <input type="password" name="Contrasena" class="campo" placeholder="Contraseña" required>
             <br><br>
         </div>
        

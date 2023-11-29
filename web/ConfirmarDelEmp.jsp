@@ -14,12 +14,15 @@
             text-align: center;
         }
 
+        .logo-container {
+            position: absolute;
+            top: 4%;
+            left: -6%;
+        }
+
         .logo {
-            position: relative;
-            width: 10%;
-            height: 10%;
-            margin-top: 1%;
-            z-index: 1; /* Agregado para que el logo esté sobre la barra horizontal */
+            height: 20%;
+            width: 20%;
         }
 
         .decoration {
@@ -32,6 +35,16 @@
             width: 95%; /* Ancho del rectángulo */
             background-color: #ffffff;
             z-index: 0; /* Asegura que la barra horizontal esté detrás del logo */
+        }
+        
+        .Titulo {
+            font-size: 60px;
+            position: absolute;
+            top: 5%;
+            left: 20%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #ffffff;
         }
 
         h2 {
@@ -79,20 +92,47 @@
             cursor: pointer;
         }
 
-        input[type="submit"]:last-child {
-            margin-right: 0;
+        input[type="submit"]:hover{
+            background-color: #9266cc;
+            color: #ffffff;
+        }
+        
+        .btn1 {
+            position: absolute;
+            left: 20%;
+            bottom: 5%;  /* Ajusta la posición vertical según tus necesidades */
+        }
+
+        .btn2 {
+            position: absolute;
+            left: 70%;
+            bottom: 5%;  /* Ajusta la posición vertical según tus necesidades */
         }
 
         input[type="hidden"] {
             display: none;
         }
+        
+        input[type="submit"]:last-child {
+            margin-right: 0;
+        }
     </style>
 </head>
 <body>
     
-    <img src="LogoGRPWVE.png" class="logo">
-    
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="LogoGRPWVE.png" alt="Logo" class="logo">
+        </a>
+    </div>
+        
     <div class="decoration"></div>
+    
+    <div class="Titulo">
+        Eliminar Empleado
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br>
 
     <h2>Confirmar Eliminación del Empleado</h2>
 
@@ -159,20 +199,16 @@
             <td>Correo</td>
             <td><%= correoEmp %></td>
         </tr>
-        <tr>
-            <td>Contraseña</td>
-            <td><%= contraseñaEmp %></td>
-        </tr>
     </table>
 
     <form action="EliminarEmp.jsp" method="post">
         <input type="hidden" name="Correo" value="<%= correoEmp %>">
         <br><br>
-        <input type="submit" value="Confirmar Eliminación">
+        <input type="submit" value="Confirmar Eliminación" class="btn1">
     </form>
 
-    <form action="CancelarEliminacion.jsp">
-        <input type="submit" value="Cancelar Eliminación">
+    <form action="DelEmp.jsp" method="post">
+        <input type="submit" value="Cancelar Eliminación" class="btn2">
     </form>
 </body>
 </html>

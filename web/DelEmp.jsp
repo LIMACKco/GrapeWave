@@ -36,9 +36,13 @@
             <input type="password" name="Contrasenia" class="campo" placeholder="Contraseña Administrador" required>
         </div>
         
-        <input type="submit" name="Eliminar" value="Eliminar Empleado">
-        
+    <input type="submit" name="Eliminar" value="Eliminar Empleado" class="btn1">
     </form>
+    
+    <form action="MenuAdmin.jsp">
+        <input type="submit" name="Regresar" value="Regresar al Menú" class="btn2">
+    </form>
+    
 </body>
 </html>
 

@@ -116,7 +116,6 @@ body {
 
 input[type="submit"] {/* Estilo del Submit */
     font-size: 24px;/*Tamaño de la fuente*/
-    top: 70%;/*Margen del boton hacia arriba con respecto a un div*/
     background-color: #b8ff68; /* Color verde */
     padding: 20px 40px;/*Margen interno */
     color: black;/*Color de la letra*/
@@ -128,7 +127,17 @@ input[type="submit"] {/* Estilo del Submit */
     transform: translateX(-50%);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-        
+
+.btn1{
+    position: absolute;
+    top: 55%;
+}
+ 
+.btn2{
+    position: absolute;
+    top: 70%;
+}
+
 input[type="submit"]:hover{
     background-color: #9266cc;
     color: #ffffff;

@@ -88,7 +88,8 @@ Correo_Empleado varchar(255),
 contraseña varchar(20));
 
 insert into Empleados (Nombre_Empleado, Ap_PatEmp, Ap_MatEmp, Telefono_Empleado, Calle_Empleado, Num_ExtEmpleado, Colonia_Empleado, Municipio_Empleado, Estado_Empleado, Correo_Empleado, contraseña) values 
-("Gabriel","Hernández","Vera",5566514825,"Heroes de Nacozari",99,"Campestre","Tecamachalco","Estado de México","hernandez.vera.gabriel@gmail.com","garven1234"),("María","Martínez","Gómez",5551112233,"Calle 1", 45, "Residencial ABC", "Ciudad de México", "Ciudad de México", "maria@example.com","empPass"),
+("Gabriel","Hernández","Vera",5566514825,"Heroes de Nacozari",99,"Campestre","Tecamachalco","Estado de México","hernandez.vera.gabriel@gmail.com","garven1234"),
+("María","Martínez","Gómez",5551112233,"Calle 1", 45, "Residencial ABC", "Ciudad de México", "Ciudad de México", "maria@example.com","empPass"),
 ("Pedro","Ramírez","López",5563344556,"Avenida 2", 67, "Colonia XYZ", "Guadalajara", "Jalisco", "pedro@example.com","employee123"),
 ("Sofía","González","Hernández",5588776655,"Calle 3", 89, "Barrio Nuevo", "Monterrey", "Nuevo León", "sofia@example.com","employeePass123");
 

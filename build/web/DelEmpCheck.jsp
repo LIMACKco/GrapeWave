@@ -16,7 +16,6 @@
         <%@page import="Conexión.Conexion"%>
         
         <%
-            re
             String correoEmp = request.getParameter("Correo");
             String contra = request.getParameter("Contrasenia");
             
@@ -24,7 +23,8 @@
             PreparedStatement sta = null; // Variable de Statement
             
             try {
-                cnx = Conexion.obtenerConexion( Conexion.isLocalHost( request ) );
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
                 
                 // Verifica la existencia del empleado antes de redirigir a ConfirmarDelEmp.jsp
                 String verificarQuery = "SELECT * FROM Empleados WHERE Correo_Empleado = ?";

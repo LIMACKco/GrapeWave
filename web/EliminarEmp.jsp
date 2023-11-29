@@ -15,17 +15,15 @@
     </head>
     <body>
         <%
-            String email = request.getParameter("correoEmp");
+            String email = request.getParameter("Correo");
 
             Connection cnx = null;
             PreparedStatement sta = null;
 
         try {
-            cnx = Conexion.obtenerConexion( Conexion.isLocalHost( request ) );
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
 
-            String nombreUsuario = null;
-
-            // Verificar en la tabla Empleados
             String Query = "delete from Empleados where Correo_Empleado = ? ";
             sta = cnx.prepareStatement(Query);
             sta.setString(1, email);

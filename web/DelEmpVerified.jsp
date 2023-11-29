@@ -23,9 +23,9 @@
     </div>
     
     <div class="boton-start">
-        <a class="start-button" href="IniciarSesion.jsp">Eliminar otro Empleado</a>
+        <a class="start-button" href="DelEmp.jsp">Eliminar otro Empleado</a>
         
-        <a class="start-button" href="IniciarSesion.jsp">Regresar al Menú</a>
+        <a class="start-button" href="MenuAdmin.jsp">Regresar al Menú</a>
     </div>
     
 </body>

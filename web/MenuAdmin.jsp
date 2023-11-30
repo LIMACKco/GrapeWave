@@ -106,7 +106,7 @@
         Informes
     </div>
 
-    <div class="btnInv" onclick="redirectTo('Inventario.jsp')">
+    <div class="btnInv" onclick="redirectTo('SelectInventario.jsp')">
         <img src="Inventario.png" class="inventario"><br><br>
         Inventario
     </div>

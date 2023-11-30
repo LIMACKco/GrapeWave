@@ -52,7 +52,15 @@ Imágen blob);
 insert into Productos(Nombre_Producto, Descripción, Categoría, Marca, Precio, Stock, Lote, Ubicación, Imágen) values
 ('Smartphone X', 'Un smartphone avanzado con características destacadas', 'Electrónicos', 'MarcaTech', 799.99, 50, 'Lote123', 'Almacén A', 'imagen1.jpg'),
 ('Laptop Pro', 'Una potente laptop diseñada para profesionales', 'Electrónicos', 'MarcaPro', 1299.99, 20, 'Lote456', 'Almacén B', 'imagen2.jpg'),
-('Cámara HD', 'Cámara de alta definición para capturar momentos inolvidables', 'Fotografía', 'MarcaFoto', 299.99, 30, 'Lote789', 'Almacén C', 'imagen3.jpg');
+('Cámara HD', 'Cámara de alta definición para capturar momentos inolvidables', 'Fotografía', 'MarcaFoto', 299.99, 30, 'Lote789', 'Almacén C', 'imagen3.jpg'),
+('Altavoces SonicBoom', 'Altavoces potentes para una experiencia de audio envolvente', 'Audio', 'MarcaSonic', 99.99, 15, 'Lote111', 'Almacén C', 'imagen9.jpg'),
+('Monitor VisionTech', 'Monitor de alta resolución para una visualización nítida', 'Informática', 'MarcaVision', 399.99, 25, 'Lote222', 'Almacén B', 'imagen10.jpg'),
+('Teclado GamingX', 'Teclado diseñado especialmente para jugadores con retroiluminación LED', 'Accesorios', 'MarcaGaming', 79.99, 30, 'Lote333', 'Almacén A', 'imagen11.jpg'),
+('Impresora 3D PrintCraft', 'Impresora 3D para materializar tus ideas en objetos tangibles', 'Oficina', 'MarcaCraft', 499.99, 10, 'Lote444', 'Almacén C', 'imagen12.jpg'),
+('Smart TV UltraView', 'Televisor inteligente con resolución Ultra HD para una experiencia visual asombrosa', 'Electrónicos', 'MarcaView', 899.99, 18, 'Lote555', 'Almacén A', 'imagen13.jpg'),
+('Micrófono StudioSound', 'Micrófono de estudio para grabaciones de audio de alta calidad', 'Audio', 'MarcaStudio', 129.99, 20, 'Lote666', 'Almacén B', 'imagen14.jpg'),
+('Lámpara SmartLight', 'Lámpara inteligente con control remoto y ajuste de intensidad', 'Hogar', 'MarcaLight', 49.99, 40, 'Lote777', 'Almacén C', 'imagen15.jpg'),
+('Portátil UltraSlim', 'Portátil ultradelgado y ligero para la movilidad sin compromisos', 'Informática', 'MarcaSlim', 899.99, 15, 'Lote888', 'Almacén A', 'imagen16.jpg');
 
 select * from Productos;
 

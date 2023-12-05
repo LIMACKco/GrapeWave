@@ -13,7 +13,6 @@
     </head>
     <body>
         <%@page import="java.sql.*" %>
-        <%@page import="Conexión.Conexion"%>
         
         <%
             String correoEmp = request.getParameter("Correo");

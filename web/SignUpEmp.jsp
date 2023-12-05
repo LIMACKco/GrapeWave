@@ -15,7 +15,6 @@
     <body>
 
         <%@page import="java.sql.*" %>
-        <%@page import="Conexión.Conexion"%>
         <%
             String nombre = request.getParameter("Nombre");
             String appat = request.getParameter("ApPat");

@@ -27,7 +27,7 @@
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
+        cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
         String query = "insert into Productos(Nombre_Producto, Descripción, Categoría, Marca, Precio, Stock, Lote, Ubicación) values (?, ?, ?, ?, ?, ?, ?, ?)";
         sta = cnx.prepareStatement(query);
         sta.setString(1, nombre);

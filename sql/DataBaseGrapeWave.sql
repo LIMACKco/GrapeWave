@@ -80,6 +80,8 @@ contraseña varchar(20));
 
 insert into Administrador(Nombre_Admin, Ap_PatAdmin, Ap_MatAdmin, Teléfono_Admin, Calle_Admin, Num_ExtAdmin, Colonia_Admin, Municipio_Admin, Estado_Admin, Correo_Admin, contraseña) values
 ("Hermelinda","Gonzalez","Aguilar",5562159789,"Francisco Villa", 12, "Tres Marías", "Ecatepec", "Estado de México", "hermega12@gmail.com","miperrococoa"),
+("Axon","Ax","Bx",5555555555,"axbxcxdx", 24, "axbxcxdx", "axbxcxdx", "axbxcxdx", "axon@gmail.com","aldo24hacking"),
+("Mauricio","Noguerón","García",5568721257,"Nogal", 52, "Tláhuac", "Tlahuac", "Ciudad de México", "nogueron.garcia.mauricio@gmail.com","maau"),
 ("Roberto","López","García",5547891201,"Calle Principal", 8, "Centro", "Ciudad de México", "Ciudad de México", "roberto@example.com","adminPass"),
 ("Elena","Rodríguez","Hernández",5569876543,"Avenida Central", 15, "Colonia Moderna", "Guadalajara", "Jalisco", "elena@example.com","admin123"),
 ("Juan","Pérez","Sánchez",5532109876,"Calle Nueva", 21, "Bosque Residencial", "Monterrey", "Nuevo León", "juan@example.com","adminPass123");

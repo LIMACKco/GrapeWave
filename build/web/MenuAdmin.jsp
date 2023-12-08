@@ -128,5 +128,9 @@
             window.location.href = url;
         }
     </script>
+    
+    <a href="Soporte.jsp">Soporte Técnico</a>
+    <br><br>
+    <a href="Server.html">Peticiones</a>
 </body>
 </html>

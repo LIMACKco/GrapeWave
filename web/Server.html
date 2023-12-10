@@ -39,13 +39,13 @@
         .server-message {
             background-color: #b8ff68;
             color: black;
-            align-self: flex-start;
+            align-self: flex-end; /* Cambiado a flex-end */
         }
 
         .client-message {
             background-color: #9266cc;
             color: white;
-            align-self: flex-end;
+            align-self: flex-start; /* Cambiado a flex-start */
         }
 
         #input-container {
@@ -83,7 +83,7 @@
     </div>
 
     <script>
-        var socket = new WebSocket("ws://localhost:8085/GrapeWave/server");
+        var socket = new WebSocket("ws://limack.gerdoc.com/GrapeWave/server");
 
         socket.onmessage = function (event) {
             var chatBox = document.getElementById("chat-box");

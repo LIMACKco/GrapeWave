@@ -83,7 +83,7 @@
     </div>
 
     <script>
-        var socket = new WebSocket("ws://localhost:8085/GrapeWave/server");
+        var socket = new WebSocket("ws://limack.gerdoc.com/GrapeWave/server");
 
         socket.onmessage = function (event) {
             var chatBox = document.getElementById("chat-box");

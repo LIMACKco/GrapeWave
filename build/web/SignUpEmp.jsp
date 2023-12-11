@@ -35,7 +35,7 @@
             
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
                 String query = "insert into Empleados(Nombre_Empleado, Ap_PatEmp, Ap_MatEmp, Telefono_Empleado, Calle_Empleado, Num_ExtEmpleado, Colonia_Empleado, Municipio_Empleado, Estado_Empleado, Correo_Empleado, contraseña) "
                 + "values (?,?,?,?,?,?,?,?,?,?,?)";
                 sta = cnx.prepareStatement(query);//Crea el Statement

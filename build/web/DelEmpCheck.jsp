@@ -23,7 +23,7 @@
             
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
                 
                 // Verifica la existencia del empleado antes de redirigir a ConfirmarDelEmp.jsp
                 String verificarQuery = "SELECT * FROM Empleados WHERE Correo_Empleado = ?";

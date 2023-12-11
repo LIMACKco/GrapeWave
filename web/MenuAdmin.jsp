@@ -122,15 +122,18 @@
     </div>
 
     <div class="decoration"></div>
+    
+    <a href="Soporte.jsp">
+    <div class="foro-btn" style="background-color: #ffffff; position: absolute; width: 60px; height: 60px; top: 5%; left: 90%; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <img src="chats.png" style="width: 60%; height: auto; display: block;">
+    </div>
+    </a>
 
     <script>
         function redirectTo(url) {
             window.location.href = url;
         }
     </script>
-    
-    <a href="Soporte.jsp?nombre_usuario=<%=request.getParameter("nombre")%>&foro=true">Soporte Técnico</a>
-    <br><br>
-    <a href="Server.html">Peticiones</a>
+
 </body>
 </html>

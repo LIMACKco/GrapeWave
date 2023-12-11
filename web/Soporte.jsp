@@ -90,7 +90,7 @@
     </div>
 
     <script>
-        var socket = new WebSocket("ws://limack.gerdoc.com/GrapeWave/forum");
+        var socket = new WebSocket("wss://limack.gerdoc.com/GrapeWave/forum");
 
         var userName = '<%=request.getParameter("nombre_usuario")%>';
 

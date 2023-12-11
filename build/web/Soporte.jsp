@@ -31,9 +31,9 @@
             padding: 5px;
             margin-bottom: 5px;
             border-radius: 5px;
-            max-width: 70%;
             word-wrap: break-word;
-            font-size: 30px;
+            font-size: 18px;
+            max-width: 70%;
         }
 
         .server-message {
@@ -46,6 +46,13 @@
             background-color: #9266cc;
             color: white;
             align-self: flex-end;
+        }
+
+        .sender-name {
+            color: #555;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: right;
         }
 
         #input-container {
@@ -83,50 +90,63 @@
     </div>
 
     <script>
-        var socket = new WebSocket("ws://limack.gerdoc.com/GrapeWave/server");
+        var socket = new WebSocket("ws://limack.gerdoc.com/GrapeWave/forum");
+
+        var userName = '<%=request.getParameter("nombre_usuario")%>';
+
+        socket.onopen = function(event) {
+            var joinMessage = "Te has unido al foro.";
+            var messageData = {
+                type: "user-join",
+                message: joinMessage,
+                sender: "server"  // Definir un remitente para los mensajes del servidor
+            };
+            displayMessage(messageData);
+        };
 
         socket.onmessage = function (event) {
-            var chatBox = document.getElementById("chat-box");
-            var message = event.data;
+            var messageData = JSON.parse(event.data);
+            displayMessage(messageData);
+        };
 
+        function displayMessage(messageData) {
+            var chatBox = document.getElementById("chat-box");
             var container = document.createElement("div");
             container.classList.add("message-container");
 
-            var messageInfo = getMessageInfo(message);
-
-            container.classList.add(messageInfo.origin === "Servidor" ? "server-message" : "client-message");
-            container.innerHTML = "<p>" + messageInfo.content + "</p>";
-
-            if (!isMessageDuplicate(container)) {
-                chatBox.appendChild(container);
+            if (messageData.type === "user-join") {
+                container.classList.add("server-message");
+            } else {
+                if (messageData.sender === userName) {
+                    container.classList.add("client-message");
+                } else {
+                    container.classList.add("server-message");
+                    var senderName = document.createElement("p");
+                    senderName.classList.add("sender-name");
+                    senderName.textContent = messageData.sender;
+                    container.appendChild(senderName);
+                }
             }
 
+            var messageContent = document.createElement("p");
+            messageContent.textContent = messageData.message;
+            container.appendChild(messageContent);
+
+            chatBox.appendChild(container);
             chatBox.scrollTop = chatBox.scrollHeight;
-        };
+        }
 
         function sendMessage() {
             var message = document.getElementById("message").value;
-            socket.send("Cliente:" + message);
+            var messageData = {
+                type: "user-message",
+                message: message,
+                sender: userName
+            };
+
+            socket.send(JSON.stringify(messageData));
 
             document.getElementById("message").value = "";
-        }
-
-        function getMessageInfo(message) {
-            var parts = message.split(":");
-            return {
-                origin: parts[0].trim(),
-                content: parts.slice(1).join(":").trim()
-            };
-        }
-
-        function isMessageDuplicate(newMessageContainer) {
-            var chatMessages = document.querySelectorAll(".message-container");
-            for (var i = 0; i < chatMessages.length; i++) {
-                if (chatMessages[i].innerHTML === newMessageContainer.innerHTML) {
-                    return true;
-                }
-            }
-            return false;
         }
     </script>
 </body>

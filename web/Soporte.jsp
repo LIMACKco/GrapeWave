@@ -23,10 +23,6 @@
             flex-direction: column;
         }
 
-        .message-container p {
-            margin: 0;
-        }
-
         .message-container {
             padding: 5px;
             margin-bottom: 5px;
@@ -37,15 +33,26 @@
         }
 
         .server-message {
-            background-color: #b8ff68;
             color: black;
             align-self: flex-start;
+        }
+
+        .server-join-message {
+            color: #999999;
+            text-align: center; /* Añadir esta línea */
+            align-self: center; /* Añadir esta línea */
         }
 
         .client-message {
             background-color: #9266cc;
             color: white;
             align-self: flex-end;
+        }
+
+        .other-client-message {
+            background-color: #b8ff68;
+            color: black;
+            align-self: flex-start;
         }
 
         .sender-name {
@@ -90,9 +97,8 @@
     </div>
 
     <script>
-        var socket = new WebSocket("wss://limack.gerdoc.com/GrapeWave/forum");
-
-        var userName = '<%=request.getParameter("nombre_usuario")%>';
+        var userName = '<%=request.getParameter("nombre")%>';
+        var socket = new WebSocket("ws://limack.gerdoc.com/GrapeWave/forum");
 
         socket.onopen = function(event) {
             var joinMessage = "Te has unido al foro.";
@@ -115,17 +121,18 @@
             container.classList.add("message-container");
 
             if (messageData.type === "user-join") {
-                container.classList.add("server-message");
+                container.classList.add("server-join-message");
             } else {
                 if (messageData.sender === userName) {
                     container.classList.add("client-message");
                 } else {
-                    container.classList.add("server-message");
-                    var senderName = document.createElement("p");
-                    senderName.classList.add("sender-name");
-                    senderName.textContent = messageData.sender;
-                    container.appendChild(senderName);
+                    container.classList.add("other-client-message");
                 }
+                
+                var senderName = document.createElement("p");
+                senderName.classList.add("sender-name");
+                senderName.textContent = messageData.sender;
+                container.appendChild(senderName);
             }
 
             var messageContent = document.createElement("p");

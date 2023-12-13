@@ -89,7 +89,7 @@
     </style>
 </head>
 <body>
-    <h1>Soporte Técnico</h1>
+    <h1>Foro</h1>
     <div id="chat-box"></div>
     <div id="input-container">
         <input type="text" id="message" placeholder="Escribe un mensaje..." />

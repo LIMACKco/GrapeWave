@@ -98,7 +98,7 @@
 
     <script>
         var userName = '<%=request.getParameter("nombre")%>';
-        var socket = new WebSocket("ws://limack.gerdoc.com:80/GrapeWave/forum");
+        var socket = new WebSocket("ws://limack.gerdoc.com:9080/GrapeWave/forum");
 
         socket.onopen = function(event) {
             var joinMessage = "Te has unido al foro.";

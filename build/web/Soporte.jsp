@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte TÃ©cnico</title>
+    <title>Soporte Técnico</title>
     <style>
         body {
             margin: 0;
@@ -39,8 +39,8 @@
 
         .server-join-message {
             color: #999999;
-            text-align: center; /* AÃ±adir esta lÃ­nea */
-            align-self: center; /* AÃ±adir esta lÃ­nea */
+            text-align: center; /* Añadir esta línea */
+            align-self: center; /* Añadir esta línea */
         }
 
         .client-message {
@@ -89,7 +89,7 @@
     </style>
 </head>
 <body>
-    <h1>Soporte TÃ©cnico</h1>
+    <h1>Soporte Técnico</h1>
     <div id="chat-box"></div>
     <div id="input-container">
         <input type="text" id="message" placeholder="Escribe un mensaje..." />
@@ -98,7 +98,7 @@
 
     <script>
         var userName = '<%=request.getParameter("nombre")%>';
-        var socket = new WebSocket("wss://limack.gerdoc.com/GrapeWave/forum");
+        var socket = new WebSocket("ws://limack.gerdoc.com:80/GrapeWave/forum");
 
         socket.onopen = function(event) {
             var joinMessage = "Te has unido al foro.";

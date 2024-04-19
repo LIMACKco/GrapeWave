@@ -33,7 +33,11 @@
     </div>
     </a>
     
+<<<<<<< HEAD
     <a href="Inventario_Productos.jsp">
+=======
+    <a href="Inventario.jsp">
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     <div class="btnConsProd">
         <img src="ConsProd.png" class="consultar"><br><br>
         Consultar Productos

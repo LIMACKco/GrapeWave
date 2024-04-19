@@ -21,7 +21,11 @@
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
+<<<<<<< HEAD
             cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+=======
+            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 
             String Query = "delete from Empleados where Correo_Empleado = ? ";
             sta = cnx.prepareStatement(Query);

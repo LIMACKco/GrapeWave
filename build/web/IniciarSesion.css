@@ -66,6 +66,7 @@ body {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 input[type="submit"] { /* Estilo del Submit */
     font-size: 24px; /* Tamaño de la fuente */
     top: 80%; /* Margen del botón hacia arriba con respecto a un div */
@@ -122,5 +123,7 @@ input[type="submit"]:hover {
  
 
 
+=======
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 
 

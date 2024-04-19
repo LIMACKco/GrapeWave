@@ -9,7 +9,11 @@ ResultSet rs = null;
 try {
     // Establecer la conexión a la base de datos (ajusta los detalles según tu configuración)
     Class.forName("com.mysql.cj.jdbc.Driver");
+<<<<<<< HEAD
     cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+=======
+    cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 
     // Consulta SQL para obtener todos los empleados
     String query = "select * from Empleados";

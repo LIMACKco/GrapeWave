@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Error en la Sucursal</title>
     <link rel="stylesheet" href="ErrorSucursal.css">
 </head>
@@ -32,5 +33,25 @@
         </div>
     
     </form>
+=======
+    <title>Document</title>
+    <link rel="stylesheet" href="ErrorSucursal.css">
+</head>
+<body>
+    <div class="imgver">
+        <img src="Cancel.png" class="imagen">
+    </div>
+    
+    <div class="texto1">
+        <h2>Sucursal Inexistente.</h2>
+        Parece ser que el Código de Sucursal ingresado es incorrecto. 
+        <br><br>
+        Verifica el Código de Sucursal para acceder a los beneficios y ser parte de GrapeWave.
+    </div>
+    
+    <div class="boton-start">
+        <a class="start-button" href="RegistrarseAd.jsp">Aceptar</a>
+    </div>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 </body>
 </html>

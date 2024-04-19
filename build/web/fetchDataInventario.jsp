@@ -15,7 +15,11 @@ ResultSet rs = null;
 try {
     // Establecer la conexión a la base de datos (ajusta los detalles según tu configuración)
     Class.forName("com.mysql.cj.jdbc.Driver");
+<<<<<<< HEAD
     cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
+=======
+    cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 
     // Consulta SQL para obtener todos los empleados
     String query = "select * from Productos";
@@ -29,8 +33,12 @@ try {
             <th class="data">Descripción</th>
             <th class="data">Categoría</th>
             <th class="data">Marca</th>
+<<<<<<< HEAD
             <th class="data">Precio de Proveedor</th>
             <th class="data">Precio Público</th>
+=======
+            <th class="data">Precio</th>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
             <th class="data">Stock</th>
             <th class="data">Lote</th>
             <th class="data">Ubicación</th>
@@ -49,6 +57,7 @@ try {
                     <td class="data"><%= rs.getString("Descripción") %></td>
                     <td class="data"><%= rs.getString("Categoría") %></td>
                     <td class="data"><%= rs.getString("Marca") %></td>
+<<<<<<< HEAD
                     <td class="data"><center>$ <%= rs.getInt("Precio_Proov") %></center></td>
                     <td class="data"><center>$ <%= rs.getInt("Precio_Pub") %></center></td>
                     <td class="data"><center><%= rs.getInt("Stock") %></center></td>
@@ -56,6 +65,14 @@ try {
                     <td class="data"><%= rs.getString("Ubicación") %></td>
                     <td class="data">
                         <a href="ModProd.jsp?id=<%= rs.getInt("Id_Producto") %>">
+=======
+                    <td class="data"><%= rs.getInt("Precio") %></td>
+                    <td class="data"><%= rs.getInt("Stock") %></td>
+                    <td class="data"><%= rs.getString("Lote") %></td>
+                    <td class="data"><%= rs.getString("Ubicación") %></td>
+                    <td class="data">
+                        <a href="editarProducto.jsp?id=<%= rs.getInt("Id_Producto") %>">
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
                             <img src="Edit.png" alt="Editar" width="50" height="50">
                         </a>
                     </td>

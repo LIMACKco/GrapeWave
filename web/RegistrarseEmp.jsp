@@ -7,11 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
+<<<<<<< HEAD
 <!DOCTYPE html>
+=======
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="RegistrarseEmp.css"/>
     <title>Registro Empleado</title>
     
@@ -29,6 +33,109 @@
             }
         }
         
+=======
+    <title>Limack</title>
+    <style>
+        /* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.logo-container {
+    position: fixed;/* Hace un div fijo*/
+    top: 10px;/* Espacio hacia arriba*/
+    left: 20px;/* Espacio a la Izquierda*/
+}
+
+.logo {
+    max-width: 20%; 
+    height: auto;
+}
+
+input[type="submit"] {/* Estilo del Submit */
+    font-size: 24px;/*Tamaño de la fuente*/
+    top: 110%;/*Margen del boton hacia arriba con respecto a un div*/
+    background-color: #b8ff68; /* Color verde */
+    padding: 20px 40px;/*Margen interno */
+    color: black;/*Color de la letra*/
+    border: none;/*Borde*/
+    border-radius: 45px;/*Redondeado del botón*/
+    text-decoration: none;
+    position: absolute;/*Permite que los divs no se encimen*/
+    left: 50%;/*Espacio a la izquierda cojn respecto a la página*/
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+}
+
+.Titulo {
+    font-size: 60px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.form {
+    position: absolute;
+    top: 25%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.campo {
+    font-size: 35px;
+    border-radius: 30px;
+    border: none;
+}
+
+.campo:focus {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.texto1 {
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 150%;
+    height: auto;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.vinculo {
+    color: #ffffff;
+}
+
+.space{
+    position: absolute;
+    margin-top: 80%;
+}
+
+/* Estilo para el mensaje de error */
+        #mensajeError {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+    
+    <script>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
         function validarContraseñas() {//Funcion de Validar Contraseñas
             var contraseña1 = document.getElementById("contra1").value;
             var contraseña2 = document.getElementById("contra2").value;
@@ -52,12 +159,20 @@
     
     <div class="right-decoration"></div>
     
+<<<<<<< HEAD
     <div>
         <a href="SelectPerfil.jsp">
             <img src="LogoGRPWVE.png" alt="Logo" class="logo">
         </a>
     </div>
     
+=======
+    <div class="logo-container">
+        <img src="LogoGRPWVE.png" alt="Logo" class="logo">
+    </div>
+    
+    </a>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     <div class="Titulo">
         Registrarse
     </div>
@@ -85,6 +200,7 @@
         <br><br>
         <input type="text" class="campo" placeholder="Código de Administrador" name="Codigo" required>
         <br><br>
+<<<<<<< HEAD
         <!-- Agregado contenedor para campo de contraseña con icono del ojo -->
             <div class="campo-container">
                 <input type="password" id="contra1" class="campo" placeholder="Contraseña" name="Contrasenia" required>
@@ -100,6 +216,13 @@
             <br><br>
         <span id="mensajeError"></span><!-- InnerHTML -->
         <br>
+=======
+        <input type="password" id="contra1" class="campo" placeholder="Contraseña" name="Contrasenia" required>
+        <br><br>
+        <input type="password" id="contra2" class="campo" placeholder="Confirmar contraseña" id="contra2" name="Contraseña2" required>
+        <br><br>
+        <span id="mensajeError"></span><!-- InnerHTML -->
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
         <input type="submit" name="Registrar" value="Registrar" class="btn">
     </div>
     
@@ -107,10 +230,14 @@
         ¿Ya tienes cuenta?&nbsp;<a href="IniciarSesion.jsp" class="vinculo">Inicia sesión.</a>
     </div>
     
+<<<<<<< HEAD
     <div class="space">
         .
     </div>
     
+=======
+    <div class="space">.</div>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     </form>
 </body>
 </html>

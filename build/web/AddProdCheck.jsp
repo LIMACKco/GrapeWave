@@ -16,8 +16,12 @@
     String descripcion = request.getParameter("Descripcion");
     String categoria = request.getParameter("Categoria");
     String marca = request.getParameter("Marca");
+<<<<<<< HEAD
     int precio_proov = Integer.parseInt(request.getParameter("Precio_Proov"));
     int precio_pub = Integer.parseInt(request.getParameter("Precio_Pub"));
+=======
+    int precio = Integer.parseInt(request.getParameter("Precio"));
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     int stock = Integer.parseInt(request.getParameter("Stock"));
     String lote = request.getParameter("Lote");
     String ubicacion = request.getParameter("Ubicacion");
@@ -28,18 +32,30 @@
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
+<<<<<<< HEAD
         cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "n0m3l0");
         String query = "insert into Productos(Nombre_Producto, Descripción, Categoría, Marca, Precio_Proov, Precio_Pub, Stock, Lote, Ubicación) values (?, ?, ?, ?, ?, ?, ?, ?)";
+=======
+        cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/GrapeWave?autoReconnect=true&useSSL=false", "root", "1234");
+        String query = "insert into Productos(Nombre_Producto, Descripción, Categoría, Marca, Precio, Stock, Lote, Ubicación) values (?, ?, ?, ?, ?, ?, ?, ?)";
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
         sta = cnx.prepareStatement(query);
         sta.setString(1, nombre);
         sta.setString(2, descripcion);
         sta.setString(3, categoria);
         sta.setString(4, marca);
+<<<<<<< HEAD
         sta.setInt(5,precio_proov);
         sta.setInt(6,precio_proov);
         sta.setInt(7, stock);
         sta.setString(8, lote);
         sta.setString(9, ubicacion);
+=======
+        sta.setInt(5,precio);
+        sta.setInt(6, stock);
+        sta.setString(7, lote);
+        sta.setString(8, ubicacion);
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 
         sta.executeUpdate();
 

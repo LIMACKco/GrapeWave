@@ -1,6 +1,11 @@
 /* 
+<<<<<<< HEAD
     Created on: 6 nov. 2023, 19:52:57
     Author: Aldo Gonzalez
+=======
+    Created on : 6 nov. 2023, 19:52:57
+    Author     : Aldo Gonzalez
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 */
 
 body {
@@ -13,11 +18,19 @@ body {
 
 .left-decoration,
 .right-decoration {
+<<<<<<< HEAD
     position: absolute;
     top: 50%;
     height: 6%;
     width: 20%;
     background-color: #9266cc;
+=======
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 50%;
+    height: 6%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 20%; /* Ancho del rectángulo */
+    background-color: #9266cc; /* Color morado */
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 }
 
 .left-decoration {
@@ -44,6 +57,7 @@ body {
     margin-right: 20px;
 }
 
+<<<<<<< HEAD
 .login,
 .register {
     font-size: 24px;
@@ -85,11 +99,58 @@ body {
     top: 16%;
     left: 50%;
     transform: translateX(-50%);
+=======
+.login {
+    font-size: 24px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 35px;
+    background-color: #b8ff68;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.login:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.register {
+    font-size: 24px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 35px;
+    background-color: #444941;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.register:hover {
+    background-color: #b8ff68;
+    color: #000000;
+}
+
+.logo-container {
+    position: absolute; /* Cambiado a posición fija */
+    top: 16%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     text-align: center;
 }
 
 .logo {
+<<<<<<< HEAD
     max-width: 200px;
+=======
+    max-width: 200px; /* Tamaño máximo de la imagen */
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     height: auto;
 }
 
@@ -114,16 +175,26 @@ body {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .Titulo {
     font-size: 60px;
     position: absolute;
     top: 46%;
     left: 50%;
     transform: translateX(-50%);
+=======
+.Titulo{
+    font-size: 60px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 46%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     text-align: center;
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .left-decorationii {
     position: absolute;
     top: 15%;
@@ -148,10 +219,37 @@ body {
     top: 57%;
     left: 50%;
     transform: translateX(-50%);
+=======
+.left-decorationii{
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 15%;
+    height: 0.2%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 30%; /* Ancho del rectángulo */
+    background-color: #b8ff68; /* Color morado */
+    left: 0;
+}
+
+.right-decorationii{
+    position: absolute; /* Posición absoluta para los rectángulos */
+    top: 93%;
+    height: 0.2%; /* Altura del 100% para ocupar toda la altura de la página */
+    width: 30%; /* Ancho del rectángulo */
+    background-color: #b8ff68; /* Color morado */
+    right: 0;
+}
+
+.texto1{
+    font-size: 35px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 57%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     text-align: center;
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .texto2 {
     font-size: 20px;
     position: absolute;
@@ -163,6 +261,18 @@ body {
 }
 
 .presentacion {
+=======
+.texto2{
+    font-size: 20px;
+    position: absolute; /* Cambiado a posición fija */
+    top: 70%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #ffffff;
+}
+.presentacion{
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     position: absolute;
     margin-top: 100px;
     color: whitesmoke;
@@ -172,16 +282,25 @@ body {
     transform: translateX(-50%);
 }
 
+<<<<<<< HEAD
 .encabezado {
     color: #b8ff68;
 }
 
 .encabezado2 {
+=======
+.encabezado{
+    color: #b8ff68;
+}
+
+.encabezado2{
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     color: #9266cc;
 }
 
 .tarjeta-grid {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
     gap: 10%;
 }
@@ -207,11 +326,57 @@ body {
 .tarjeta4:hover,
 .tarjeta5:hover,
 .tarjeta6:hover {
+=======
+    grid-template-columns: 1fr 1fr; /* Divide en 2 columnas */
+    gap: 10%; /* Espacio entre las tarjetas */
+}
+
+/* Estilos comunes para todas las tarjetas */
+.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5, .tarjeta6 {
+    background-color: #241e1e; /* Color de fondo de la tarjeta */
+    border: 1px solid #e0e0e0; /* Borde de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ancho de la tarjeta al 100% */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+.tarjeta1:hover{
     background-color: #9266cc;
     color: #ffffff;
     transform: translateY(-3px);
 }
+.tarjeta2:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta3:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta4:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta5:hover{
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+.tarjeta6:hover{
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
+    background-color: #9266cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 .contenido {
     font-size: 16px;
     color: #ffffff;
@@ -219,5 +384,10 @@ body {
 }
 
 ::-webkit-scrollbar {
+<<<<<<< HEAD
     display: none;
 }
+=======
+display: none;
+}
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7

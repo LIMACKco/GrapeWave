@@ -103,9 +103,13 @@
             <br><br>
             <input type="text" class="campo" placeholder="Marca" name="Marca" required>
             <br><br>
+<<<<<<< HEAD
             <input type="number" class="campo" placeholder="Precio Proovedor" name="Precio_Proov" step="0.01" required min="1" >
             <br><br>
             <input type="number" class="campo" placeholder="Precio Público" name="Precio_Pub" step="0.01" required min="1" >
+=======
+            <input type="number" class="campo" placeholder="Precio" name="Precio" step="0.01" required min="1" >
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
             <br><br>
             <input type="number" class="campo" placeholder="Stock" name="Stock" required min="0">
             <br><br>

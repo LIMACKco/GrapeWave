@@ -96,6 +96,19 @@
 
     <div class="Titulo"></div>
 
+<<<<<<< HEAD
+=======
+    <div class="btnEmp" onclick="redirectTo('GestionEmpleados.jsp')">
+        <img src="empleado.png" class="empleado"><br><br>
+        Gestion de Empleados
+    </div>
+
+    <div class="btnInfo" onclick="redirectTo('InformesAdmin.jsp')">
+        <img src="Informes.png" class="informes"><br><br>
+        Informes
+    </div>
+
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     <div class="btnInv" onclick="redirectTo('SelectInventario.jsp')">
         <img src="Inventario.png" class="inventario"><br><br>
         Inventario
@@ -106,6 +119,14 @@
         Venta de Productos
     </div>
 
+<<<<<<< HEAD
+=======
+    <div class="btnRetiros" onclick="redirectTo('Retiros.jsp')">
+        <img src="Retiros.png" class="retiros"><br><br>
+        Retiros
+    </div>
+
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
     <div class="decoration"></div>
 
     <a href="Soporte.jsp">
@@ -119,7 +140,14 @@
             window.location.href = url;
         }
     </script>
+<<<<<<< HEAD
 
+=======
+    
+    <a href="Soporte.jsp?nombre_usuario=<%=request.getParameter("nombre")%>&foro=true">Soporte Técnico</a>
+    <br><br>
+    <a href="Server.html">Peticiones</a>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 </body>
 </html>
 

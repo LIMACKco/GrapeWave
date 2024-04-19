@@ -53,6 +53,7 @@
             text-decoration: none;
         }
     </style>
+<<<<<<< HEAD
     <script>
         function togglePassword(fieldId, iconId) {
             var field = document.getElementById(fieldId);
@@ -67,6 +68,8 @@
             }
         }
     </script>
+=======
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
 </head>
 <body>
     <form action="LoginCheck.jsp" method="post">
@@ -84,6 +87,7 @@
         </div>
 
         <div class="form">
+<<<<<<< HEAD
             <div class="campo-container">
                 <input type="email" name="Email" class="campo" placeholder="Email" required>
            
@@ -94,13 +98,24 @@
                 <input type="password" id="contra1" name="Contrasena" class="campo" placeholder="Contraseña" required>
                 <img src="Ojo_Closed.png" alt="Cerrar" class="toggle-password" id="togglePassword1" onclick="togglePassword('contra1', 'togglePassword1')">
             </div>
+=======
+            <input type="email" name="Email" class="campo" placeholder="Email" required>
+            <br><br><br><br>
+            <input type="password" name="Contrasena" class="campo" placeholder="Contraseña" required>
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
             <br><br>
         </div>
        
         <div class="texto1">
+<<<<<<< HEAD
             ¿No tienes cuenta?<span class="vinculo">Regístrate.</span>
         </div>
 
+=======
+            <p>No tienes cuenta? <a href="SelectPerfil.jsp" class="vinculo">Regístrate.</a></p>
+        </div>
+            
+>>>>>>> 321f186049ddd467afa11a75ae4b39f0e32fcaa7
         <input type="submit" name="Login" value="Iniciar Sesión">
     </form>
 </body>

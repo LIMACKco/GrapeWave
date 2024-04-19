@@ -1,0 +1,75 @@
+/* 
+    Created on : 6 nov. 2023, 19:56:35
+    Author     : Aldo Gonzalez
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.logo {
+    height: 4%;
+    width: 4%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.Titulo{
+    font-size: 60px;
+    position: fixed; /* Cambiado a posición fija */
+    top: 10%; /* Ajusta la posición vertical según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-align: center;
+    color: #ffffff;
+}
+
+.btnAdm{
+    border-radius: 20px;
+    height: 30%;
+    width: 16%;
+    margin-top: 12%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    left: 20%;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.engrane{
+    margin-top: 20%;
+    background-color: #ffffff;
+    height: 48%;
+    width: 48%;
+}
+
+.btnEmp{
+    border-radius: 20px;
+    height: 30%;
+    width: 16%;
+    margin-top: 12%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    left: 64%;
+    background-color: #ffffff;
+    box-shadow: inset 0;
+    box-shadow: none;
+    color: #000000;
+}
+
+.empleado{
+    margin-top: 20%;
+    background-color: #ffffff;
+    height: 48%;
+    width: 48%;
+} 
